@@ -12,7 +12,7 @@ echo "#### nebulaUpdate run `date`" >> /var/log/nebulaUpdate.log
 
 # Clean exit if either binary is not present; nothing to do.
 if [[ ! -f $nebulaNew ]] || [[ ! -f $nebulaInstalled ]]; then
-    echo "Exiting as valid binary not found"
+    echo "Exiting as valid binary not found" >> /var/log/nebulaUpdate.log
     exit 0
 fi
 
